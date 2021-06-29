@@ -31,7 +31,7 @@ $ npm start
 ```
 
 ## Live link
-Click <a href="https://my-react-ccalculator.herokuapp.com/">My react calculator</a>
+Click <a href="https://booksttore.herokuapp.com/">Bookstore application</a>
 
 ## Available Scripts
 
