@@ -1,17 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
 
+import store from './redux/store';
+
 const initialState = {
-  bookId: 11,
-  title: 'Lord of the Rings',
-  categories: 'History',
+  book1: {
+    bookID: 11,
+    title: 'Lord of the Rings',
+    categories: 'History',
+  },
+  book2: {
+    bookID: 12,
+    title: 'The Prince Charming',
+    categories: 'Romance',
+  },
+  book3: {
+    bookID: 13,
+    title: 'The Chase',
+    categories: 'Horror',
+  },
 };
 
+const result = Math.random(initialState);
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+    {result}
+  </Provider>,
   document.getElementById('root'),
 );

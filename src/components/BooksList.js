@@ -7,18 +7,7 @@ const BooksList = () => (
       <th>Title</th>
       <th>Category</th>
     </tr>
-    <tbody>
-      <tr>
-        <td>11</td>
-        <td>Lord of the Rings</td>
-        <td>Fantasy</td>
-      </tr>
-      <tr>
-        <td>12</td>
-        <td>Love Fever</td>
-        <td>Love</td>
-      </tr>
-    </tbody>
+    <tbody />
   </table>
 );
 
