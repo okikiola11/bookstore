@@ -1,13 +1,15 @@
-# BOOKSTORE
+# REACT BOOKSTORE
 
-This is a front-end application that helps organize and manage a bookstore application. It is fast, dynamic and responsive to the specified actions and it is built with React & Redux.
+This is a front-end application built with React & Redux that helps organize and manage a bookstore application. It is fast, dynamic and responsive to the specified actions.
 
-This project has 5 milestones
-- The 1st MileStone: The first step focuses on the project setup, by removing the unnecessary files created by the create-react-app, setting up linters for creating error free PRs. Also, adding the proptypes, react-redux and redux dependencies with the following syntax:
+This project has 5 milestones:
+- The 1ST MileStone: The first step focuses on the project setup, by removing the unnecessary files created by the create-react-app, setting up linters for creating error free PRs. Also, adding the proptypes, react-redux and redux dependencies with the following syntax:
 
 ``` 
 npm install react-redux redux 
 ```
+
+- The 2ND MileStone:
 
 ## Built With
 - Node.js
