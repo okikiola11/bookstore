@@ -7,21 +7,21 @@ import App from './components/App';
 import rootReducer from './redux/reducers/index';
 
 const initialState = {
-  book1: {
+  book: [{
     bookID: 11,
     title: 'Lord of the Rings',
     categories: 'History',
   },
-  book2: {
+  {
     bookID: 12,
     title: 'The Prince Charming',
     categories: 'Romance',
   },
-  book3: {
+  {
     bookID: 13,
     title: 'The Chase',
     categories: 'Horror',
-  },
+  }],
 };
 
 const store = createStore(rootReducer, initialState);

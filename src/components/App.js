@@ -1,14 +1,14 @@
 import React from 'react';
-import BooksList from './BooksList';
-import BooksForm from './BooksForm';
+import BooksList from '../containers/BooksList';
+import BooksForm from '../containers/BooksForm';
 import '../App.css';
 
 const App = () => (
   <div className="App">
-    <React.Fragment className="App-header">
+    <>
       <BooksList />
       <BooksForm />
-    </React.Fragment>
+    </>
   </div>
 );
 
