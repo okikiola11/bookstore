@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
-
-import store from './redux/store';
+import rootReducer from './redux/reducers/index';
 
 const initialState = {
   book1: {
@@ -24,12 +24,11 @@ const initialState = {
   },
 };
 
-const result = Math.random(initialState);
+const store = createStore(rootReducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
-    {result}
   </Provider>,
   document.getElementById('root'),
 );
