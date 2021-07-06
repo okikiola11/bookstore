@@ -7,21 +7,22 @@ import App from './components/App';
 import rootReducer from './redux/reducers/index';
 
 const initialState = {
-  book: [{
-    bookID: 11,
-    title: 'Lord of the Rings',
-    categories: 'History',
-  },
-  {
-    bookID: 12,
-    title: 'The Prince Charming',
-    categories: 'Romance',
-  },
-  {
-    bookID: 13,
-    title: 'The Chase',
-    categories: 'Horror',
-  }],
+  books: [
+    {
+      id: Math.floor(Math.random() * 10),
+      title: 'Lord of the Rings',
+      category: 'History',
+    },
+    {
+      id: Math.floor(Math.random() * 10),
+      title: 'The Prince Charming',
+      category: 'Romance',
+    },
+    {
+      id: Math.floor(Math.random() * 10),
+      title: 'The Chase',
+      category: 'Horror',
+    }],
 };
 
 const store = createStore(rootReducer, initialState);

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
@@ -12,17 +13,19 @@ const BooksList = ({ books }) => (
       </tr>
     </thead>
     <tbody>
-      {books.map((book, i) => (
-        <td key={`book-${(i + 1)}`}>
-          <Book key={book.id} book={book} />
-        </td>
+      {books.map((book) => (
+        <Book key={book.id} book={book} />
       ))}
     </tbody>
   </table>
 );
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  books: PropTypes.isRequired,
 };
 
-export default BooksList;
+const mapStateToProps = (state) => ({ books: state.books });
+
+const BookListConnect = connect(mapStateToProps)(BooksList);
+
+export default BookListConnect;

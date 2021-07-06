@@ -15,9 +15,9 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.exact({
-    id: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
+    id: PropTypes.number,
+    title: PropTypes.string,
+    category: PropTypes.string,
   }).isRequired,
 };
 
