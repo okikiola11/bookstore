@@ -1,14 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { CREATE_BOOK } from '../actions/index';
 
 class BooksForm extends React.Component {
+  BOOKSCATEGORY = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
   constructor(props) {
     super(props);
     this.state = {
       title: '',
       category: 'Action',
     };
-
-    const BOOKSCATEGORY = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSelectOption = this.handleSelectOption.bind(this);
@@ -27,7 +29,13 @@ class BooksForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submit Selected!!');
-    this.setState({ title: e.target.value });
+    const { title, category } = this.state;
+    CREATE_BOOK({
+      id: Math.floor(Math.random() * 100),
+      title,
+      category,
+    });
+    this.setState({title: '', category: ''})
   };
 
   render() {
@@ -36,6 +44,7 @@ class BooksForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
+          Title
           <input
           name="textInput"
           type="text" 
@@ -44,8 +53,9 @@ class BooksForm extends React.Component {
           />
         </div>
         <div>
-          <select name="selectbox" value={category} onChange={this.handleInputChange}>
-            {BOOKSCATEGORY.map((option) => (
+          Category
+          <select name="category" value={category} onChange={this.handleInputChange}>
+            {this.BOOKSCATEGORY.map((option) => (
               <option key={option.id} value={option}>{option}</option>
             ))}
           </select>
@@ -55,5 +65,9 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  CREATE_BOOK: PropTypes.func.isRequired,
+};
 
 export default BooksForm;
