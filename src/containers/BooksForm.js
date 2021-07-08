@@ -13,14 +13,11 @@ class BooksForm extends React.Component {
       title: '',
       category: '',
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSelectOption = this.handleSelectOption.bind(this);
   }
 
   handleInputChange = (event) => {
-    const { value } = event.target;
-    const { name } = event.target.name;
+    const { value } = event.target.value;
+    const { name } = event.target;
 
     this.setState({
       [name]: value,
