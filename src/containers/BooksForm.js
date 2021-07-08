@@ -8,7 +8,7 @@ class BooksForm extends React.Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
       title: '',
       category: '',
@@ -19,7 +19,6 @@ class BooksForm extends React.Component {
   }
 
   handleInputChange = (event) => {
-    console.log('Option Selected!!');
     const { value } = event.target;
     const { name } = event.target.name;
 
@@ -69,11 +68,11 @@ class BooksForm extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  CREATE_BOOK: (book) => { dispatch(CREATE_BOOK(book)) }
+  CREATE_BOOK: (book) => { dispatch(CREATE_BOOK(book)); },
 });
 
 BooksForm.propTypes = {
-  CREATE_BOOK: PropTypes.func.isRequired
+  CREATE_BOOK: PropTypes.func.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(BooksForm);
