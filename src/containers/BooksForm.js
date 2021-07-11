@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 import { CREATE_BOOK } from '../actions/index';
 
 class BooksForm extends React.Component {
@@ -16,7 +17,7 @@ class BooksForm extends React.Component {
   }
 
   handleInputChange = (event) => {
-    const { value } = event.target.value;
+    const { value } = event.target;
     const { name } = event.target;
 
     this.setState({
@@ -29,7 +30,7 @@ class BooksForm extends React.Component {
     const { CREATE_BOOK } = this.props;
     const { title, category } = this.state;
     CREATE_BOOK({
-      id: Math.floor(Math.random() * 100),
+      id: uuidv4(),
       title,
       category,
     });
@@ -54,11 +55,11 @@ class BooksForm extends React.Component {
           Category
           <select name="category" value={category} onChange={this.handleInputChange}>
             {this.BOOKSCATEGORY.map((option) => (
-              <option key={option.id} value={option}>{option}</option>
+              <option key={option} value={option}>{option}</option>
             ))}
           </select>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Add Book</button>
       </form>
     );
   }

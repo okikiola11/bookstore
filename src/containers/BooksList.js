@@ -27,10 +27,6 @@ const BooksList = ({ books, REMOVE_BOOK }) => {
   );
 };
 
-BooksList.propTypes = {
-  books: PropTypes.instanceOf(Array).isRequired,
-};
-
 const mapStateToProps = (state) => ({ books: state.books });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -38,6 +34,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 BooksList.propTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
   REMOVE_BOOK: PropTypes.func.isRequired,
 };
 
