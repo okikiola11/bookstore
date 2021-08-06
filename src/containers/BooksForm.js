@@ -54,8 +54,8 @@ class BooksForm extends React.Component {
         <div>
           Category
           <select name="category" value={category} onChange={this.handleInputChange}>
-            {this.BOOKSCATEGORY.map((option) => (
-              <option key={option} value={option}>{option}</option>
+            {this.BOOKSCATEGORY.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
             ))}
           </select>
         </div>
