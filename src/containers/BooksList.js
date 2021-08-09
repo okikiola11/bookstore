@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
 
-const BooksList = ({ books, filter, REMOVE_BOOK, CHANGE_FILTER }) => {
+const BooksList = ({
+  books, filter, REMOVE_BOOK, CHANGE_FILTER,
+}) => {
   const handleRemoveBook = (book) => {
     REMOVE_BOOK(book);
   };
@@ -12,10 +14,10 @@ const BooksList = ({ books, filter, REMOVE_BOOK, CHANGE_FILTER }) => {
   if (filter === 'All') {
     filteredBooks = books;
   } else {
-    filteredBooks = books.filter(book => book.category === filter)
+    filteredBooks = books.filter((book) => book.category === filter);
   }
 
-  const handleFilterChange = e => {
+  const handleFilterChange = (e) => {
     CHANGE_FILTER(e.target.value);
   };
 
@@ -37,7 +39,7 @@ const BooksList = ({ books, filter, REMOVE_BOOK, CHANGE_FILTER }) => {
   );
 };
 
-const mapStateToProps = (state) => ({ 
+const mapStateToProps = (state) => ({
   books: state.books,
   filter: state.filter,
 });

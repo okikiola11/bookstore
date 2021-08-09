@@ -11,12 +11,12 @@ const CategoryFilter = () => {
     'Kids',
     'Learning',
     'Sci-fi',
-  ]
+  ];
 
   return (
     <div>
       <select name="category" onChange={handleFilterChange}>
-        {categories.map(cat => (
+        {categories.map((cat) => (
           <option key={cat}>{cat}</option>
         ))}
       </select>
