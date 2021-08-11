@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ handleFilterChange }) => {
   const categories = [
     'All',
     'Action',
