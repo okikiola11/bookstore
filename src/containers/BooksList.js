@@ -50,9 +50,9 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   REMOVE_BOOK: (book) => { dispatch(REMOVE_BOOK(book)); },
-  CHANGE_FILTER: getFilter => {
+  CHANGE_FILTER: (getFilter) => {
     dispatch(CHANGE_FILTER(getFilter));
-  }
+  },
 });
 
 BooksList.propTypes = {
