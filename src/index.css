@@ -4,6 +4,12 @@ body {
   padding: 0;
 }
 
+:root {
+  --azure: #0290ff;
+  --black: #121212;
+  --white: #ffffff;
+}
+
 .panel-bg {
   width: 1390px;
   margin: 0 auto;
@@ -16,7 +22,7 @@ nav {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 nav ul {
@@ -54,7 +60,7 @@ li {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
+  color: var(--black);
   margin-left: 50px;
 }
 
@@ -69,12 +75,8 @@ li {
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.9px;
-  color: #121212;
+  color: var(--black);
   margin-left: 50px;
-}
-
-.azure {
-  color: #0290ff;
 }
 
 .Mask {
@@ -83,4 +85,15 @@ li {
   position: absolute;
   right: 40px;
   top: 35px;
+  color: var(--azure);
+}
+
+.Lesson-Panel {
+  width: 75rem;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: var(--white);
 }

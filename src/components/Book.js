@@ -5,7 +5,7 @@ const Book = ({ book, handleRemoveBook }) => {
   const { id, title, category } = book;
 
   return (
-    <tr>
+    <tr className="Lesson-Panel">
       <td>{id}</td>
       <td>{title}</td>
       <td>{category}</td>
