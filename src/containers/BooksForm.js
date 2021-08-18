@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import { CREATE_BOOK } from '../actions/index';
+import { createBook } from '../actions/index';
 
 class BooksForm extends React.Component {
   BOOKSCATEGORY = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -27,9 +27,9 @@ class BooksForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { CREATE_BOOK } = this.props;
+    const { createBook } = this.props;
     const { title, category } = this.state;
-    CREATE_BOOK({
+    createBook({
       id: uuidv4(),
       title,
       category,
@@ -66,11 +66,11 @@ class BooksForm extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  CREATE_BOOK: (book) => { dispatch(CREATE_BOOK(book)); },
+  createBook: (book) => { dispatch(createBook(book)); },
 });
 
 BooksForm.propTypes = {
-  CREATE_BOOK: PropTypes.func.isRequired,
+  createBook: PropTypes.func.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(BooksForm);

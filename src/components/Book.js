@@ -6,7 +6,7 @@ const Book = ({ book, handleRemoveBook }) => {
 
   return (
     <tr className="Lesson-Panel">
-      <td>{id}</td>
+      <td className="book-id">{id}</td>
       <td>{title}</td>
       <td>{category}</td>
       <td><button type="button" onClick={() => handleRemoveBook(book)}>Delete</button></td>
