@@ -26,13 +26,6 @@ const BooksList = ({
     <div>
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
         <tbody>
           {filteredBooks.map((book) => (
             <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
