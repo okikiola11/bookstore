@@ -6,7 +6,7 @@ const Book = ({ book, handleRemoveBook }) => {
 
   return (
     <div className="lesson-panel">
-      <div>
+      <div className="book-container">
         <div className="book-cat">{category}</div>
         <div className="book-title">{title}</div>
         <div className="author-name">Author Name</div>
@@ -19,22 +19,22 @@ const Book = ({ book, handleRemoveBook }) => {
             <li className="book-edit">Edit</li>
           </ul>
         </div>
-        <div className="display book-progress">
-          <div className="circle" />
-          <div classsName="percent-info">
-            <span className="percentage">75%</span>
-            <br />
-            <span className="completed">Completed</span>
-          </div>
+      </div>
+      <div className="progress-bar">
+        <div className="circle" />
+        <div classsName="percent-info">
+          <span className="percentage">75%</span>
+          <br />
+          <span className="completed">Completed</span>
         </div>
-        <div className="udpate-progress">
-          <p className="current-chapter">current chapter</p>
-          <p className="chapter-number">
-            Chapter
-            {id}
-          </p>
-          <button type="button">UPDATE PROGRESS</button>
+      </div>
+      <div className="udpate-progress">
+        <div className="current-chapter">Current chapter</div>
+        <div className="chapter-number">
+          Chapter
+          {id}
         </div>
+        <button type="button">UPDATE PROGRESS</button>
       </div>
     </div>
   );

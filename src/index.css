@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: #f5f6fa;
   max-width: 1400px;
   box-sizing: border-box;
@@ -95,7 +100,6 @@ table {
 }
 
 .lesson-panel {
-  align-content: center;
   margin: 0 auto;
   padding: 32px 147px 26px 27px;
   border-radius: 4px;
@@ -103,7 +107,12 @@ table {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  align-content: center;
   align-items: center;
+}
+
+.book-container {
+  width: 30%;
 }
 
 .book-cat {
@@ -198,4 +207,111 @@ table {
   color: #4386bf;
   height: 15px;
   padding-left: 5px;
+}
+
+.completed {
+  width: 80px;
+  height: 18px;
+  margin: 7px 79px 12px 12px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.percentage {
+  color: #121212;
+  width: 68px;
+  height: 39px;
+  margin: 1px 92px 0 11px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.select-category {
+  display: flex;
+  justify-content:flex-end;
+  padding-top: 20px;
+  padding-right: 10rem;
+  margin-bottom: 15px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+}
+
+.select-dropdown select {
+  border: 2px solid #4386bf;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: transparent;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 150px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+.current-chapter {
+  width: 126px;
+  height: 18px;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin-bottom: 10px;
+}
+
+.udpate-progress button {
+  border: none;
+  background-color: #0290ff;
+  width: 169px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  border-radius: 3px;
+  color: #fff;
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+
+.chapter-number {
+  width: 75px;
+  height: 21px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+  padding: 10px 0;
+  margin: 7px 10px 4px 5px;
 }

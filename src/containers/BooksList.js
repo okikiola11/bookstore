@@ -24,14 +24,16 @@ const BooksList = ({
 
   return (
     <div>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <tbody>
+      <div className="select-category">
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+      </div>
+      <div>
+        <div className="all-books">
           {filteredBooks.map((book) => (
             <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
           ))}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 };

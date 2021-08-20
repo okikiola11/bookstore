@@ -14,7 +14,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
   ];
 
   return (
-    <div>
+    <div className="select-dropdown">
       <select name="category" onChange={handleFilterChange}>
         {categories.map((cat) => (
           <option key={cat}>{cat}</option>
