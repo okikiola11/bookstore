@@ -5,7 +5,9 @@ const NavBar = () => (
   <nav className="">
     <div className="panel-bg">
       <ul>
-        <li className="Bookstore-CMS">BOOKSTORE CMS</li>
+        <li className="Bookstore-CMS">
+          <a href="https://booksttore.herokuapp.com/">BOOKSTORE CMS</a>
+        </li>
         <li className="BOOKS">BOOKS</li>
         <li className="CATEGORIES">CATEGORIES</li>
         <li>
