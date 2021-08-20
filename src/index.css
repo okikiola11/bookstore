@@ -99,6 +99,11 @@ table {
   color: var(--azure);
 }
 
+.bck {
+  background-color: white;
+  margin: 40px;
+}
+
 .lesson-panel {
   margin: 0 auto;
   padding: 32px 147px 26px 27px;
@@ -131,8 +136,7 @@ table {
 }
 
 .book-title {
-  height: 29px;
-  margin: 3px 123px 0 0;
+  margin: 3px 123px 12px 0;
   font-family: 'Roboto Slab', serif;
   font-size: 18px;
   font-weight: bold;
@@ -224,6 +228,48 @@ table {
   color: #121212;
 }
 
+.progress-bar {
+  display: flex;
+}
+
+.circular {
+  height:100px;
+  width: 100px;
+  position: relative;  
+}
+
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #fefefe;
+  border-radius: 100%;
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #307bbe;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 250px, 100px, 0px);
+  background: #0290ff;
+}
+
 .percentage {
   color: #121212;
   width: 68px;
@@ -298,7 +344,7 @@ table {
   border-radius: 3px;
   color: #fff;
   padding-top: 6px;
-  padding-bottom: 4px;
+  padding-bottom: 7px;
 }
 
 .chapter-number {
@@ -314,4 +360,77 @@ table {
   color: #121212;
   padding: 10px 0;
   margin: 7px 10px 4px 5px;
+}
+
+.add-new-book {
+  margin-bottom: 25rem;
+  margin-left: 40px;
+}
+
+.line {
+  margin: 2.5rem 0.063rem 1.813rem 0;
+  border: solid 1px #e8e8e8;
+} 
+
+.add-form-title {
+  margin: 29px 524px 19px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.form-container form {
+  display: flex;
+}
+
+.form-input {
+  width: 57px;
+  height: 25px;
+  margin: 19px 34px 0 0;
+  padding: 13px 571px 13px 17px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  color: #c4c4c4;
+  outline: none;
+}
+
+.form-select {
+  width: 285px;
+  height: 50px;
+  margin-top: 20px;
+  padding: 8px 15px 9px 16px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  color: #c4c4c4;
+  outline: none;
+}
+
+.add-book-form {
+  width: 164px;
+  text-align: center;
+  height: 25px;
+  margin: 20px 0 0 34px;
+  padding: 13px 19px 14.2px 22px;
+  border-radius: 3px;
+  background-color: #0290ff;
+}
+
+.add-book-form button {
+  border: none;
+  background-color: inherit;
+  width: 145px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
