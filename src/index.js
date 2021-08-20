@@ -16,7 +16,7 @@ const initialState = {
     {
       id: Math.floor(Math.random() * 10),
       title: 'The Prince Charming',
-      category: 'Romance',
+      category: 'Action',
     },
     {
       id: Math.floor(Math.random() * 10),
