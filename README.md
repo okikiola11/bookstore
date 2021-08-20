@@ -23,6 +23,8 @@ npm install react-redux redux
 - Heroku
 - Jest
 
+![screenshot](src/assets/screenshot.png)
+
 ## Getting Started
 ```
 # Clone this repository
