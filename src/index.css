@@ -225,6 +225,9 @@ nav ul {
 
 .progress-bar {
   display: flex;
+  border-right: 1px solid #e8e8e8;
+  border-right-width: 2px;
+  height: 75px;
 }
 
 .circular {
@@ -309,9 +312,9 @@ nav ul {
 }
 
 .current-chapter {
-  width: 126px;
   height: 18px;
   opacity: 0.5;
+  text-transform: uppercase;
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
   font-weight: 300;
@@ -353,7 +356,7 @@ nav ul {
   letter-spacing: -0.4px;
   color: #121212;
   padding: 10px 0;
-  margin: 7px 10px 4px 5px;
+  margin: 7px 10px 4px 0px;
 }
 
 .add-new-book {
