@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { REMOVE_BOOK, CHANGE_FILTER } from '../actions/index';
+import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = ({
-  books, filter, REMOVE_BOOK, CHANGE_FILTER,
+  books, filter, removeBook, changeFilter,
 }) => {
   const handleRemoveBook = (book) => {
-    REMOVE_BOOK(book);
+    removeBook(book);
   };
   let filteredBooks = books;
   if (filter === 'All') {
@@ -19,26 +19,21 @@ const BooksList = ({
   }
 
   const handleFilterChange = (e) => {
-    CHANGE_FILTER(e.target.value);
+    changeFilter(e.target.value);
   };
 
   return (
     <div>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div className="select-category">
+        <CategoryFilter handleFilterChange={handleFilterChange} />
+      </div>
+      <div>
+        <div className="all-books">
           {filteredBooks.map((book) => (
             <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />
           ))}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 };
@@ -49,17 +44,17 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  REMOVE_BOOK: (book) => { dispatch(REMOVE_BOOK(book)); },
-  CHANGE_FILTER: (getFilter) => {
-    dispatch(CHANGE_FILTER(getFilter));
+  removeBook: (book) => { dispatch(removeBook(book)); },
+  changeFilter: (book) => {
+    dispatch(changeFilter(book));
   },
 });
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
-  REMOVE_BOOK: PropTypes.func.isRequired,
+  removeBook: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
-  CHANGE_FILTER: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 const BookListConnect = connect(mapStateToProps, mapDispatchToProps)(BooksList);

@@ -1,4 +1,4 @@
-const BooksFilters = (state = 'All', action) => {
+const booksFilter = (state = 'All', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
       return action.payload;
@@ -8,4 +8,4 @@ const BooksFilters = (state = 'All', action) => {
   }
 };
 
-export default BooksFilters;
+export default booksFilter;
